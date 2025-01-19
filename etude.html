@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Étude de dossier - Auto-entrepreneur</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-b from-blue-900 to-indigo-900 text-gray-200 font-sans flex flex-col min-h-screen">
+    <header class="bg-indigo-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Étude de dossier</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="company.html" class="hover:underline">Retour</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto py-8 flex-grow">
+        <!-- Introduction Section -->
+        <section class="bg-indigo-700 p-6 rounded shadow max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl font-bold mb-4">Introduction</h2>
+            <p class="mb-4">Voici une étude détaillée sur les étapes et les coûts liés à l'ouverture d'une
+                auto-entreprise en tant que développeur freelance. Cette analyse est conçue pour démontrer que ce choix
+                est réfléchi et adapté à mes besoins.</p>
+        </section>
+
+        <!-- Carousel Section -->
+        <section class="relative max-w-4xl mx-auto mt-8">
+            <div id="carousel" class="relative overflow-hidden rounded-lg shadow-lg">
+                <div class="flex transition-transform duration-500 ease-in-out" style="transform: translateX(0);">
+                    <!-- Slide 1 -->
+                    <div class="min-w-full bg-indigo-600 p-6 flex flex-col justify-center items-center">
+                        <h3 class="text-xl font-bold mb-4">Étape 1 : Coûts liés à l'ouverture</h3>
+                        <p class="text-center">L'ouverture d'une auto-entreprise est gratuite, mais il faut prévoir :
+                        <ul class="list-disc mt-4 text-left">
+                            <li>Assurance professionnelle (environ 100-200€/an).</li>
+                            <li>Éventuels frais bancaires pour un compte pro (env. 50€/an).</li>
+                            <li>Formation optionnelle à la gestion (env. 200€).</li>
+                        </ul>
+                        </p>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="min-w-full bg-indigo-600 p-6 flex flex-col justify-center items-center">
+                        <h3 class="text-xl font-bold mb-4">Étape 2 : Parcours administratif</h3>
+                        <p class="text-center">Le parcours pour ouvrir une auto-entreprise :
+                        <ul class="list-disc mt-4 text-left m-left">
+                            <li>Inscription sur le site officiel de l'auto-entreprise via le portail :</br> <a
+                                    href="https://www.autoentrepreneur.urssaf.fr" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="text-purple-300 hover:underline">autoentrepreneur.urssaf.fr</a>.</li>
+                            <li>Obtention du numéro SIRET sous 48 heures après validation.</li>
+                            <li>Configuration de la déclaration trimestrielle des revenus en ligne.</li>
+                            <li>Possibilité de demander un accompagnement gratuit auprès de la Chambre de Commerce et
+                                d'Industrie (CCI).</li>
+                        </ul>
+                        </p>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="min-w-full bg-indigo-600 p-6 flex flex-col justify-center items-center">
+                        <h3 class="text-xl font-bold mb-4">Étape 3 : Avantages du statut</h3>
+                        <p class="text-center">Les principaux avantages :
+                        <ul class="list-disc mt-4 text-left">
+                            <li>Simplicité administrative.</li>
+                            <li>Faibles charges sociales pour les revenus limités.</li>
+                            <li>Flexibilité et autonomie.</li>
+                            <li>Exonération de TVA sous un certain seuil de chiffre d'affaires.</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Arrows (Below the carousel) -->
+            <div class="flex justify-center space-x-4 mt-4">
+                <button onclick="moveSlide(-1)" class="bg-blue-500 hover:bg-blue-400 p-2 rounded-full">
+                    <img src="assets/angle-left-solid.svg" alt="Précédent" class="w-6 h-6">
+                </button>
+                <button onclick="moveSlide(1)" class="bg-blue-500 hover:bg-blue-400 p-2 rounded-full">
+                    <img src="assets/angle-right-solid.svg" alt="Suivant" class="w-6 h-6">
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-indigo-900 text-gray-400 p-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>© 2025 Stéphane-Dev - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <!-- Carousel Script -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll("#carousel .flex > div");
+
+        function moveSlide(direction) {
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            const offset = -currentSlide * 100;
+            document.querySelector("#carousel .flex").style.transform = `translateX(${offset}%)`;
+        }
+    </script>
+</body>
+
+</html>

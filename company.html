@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types d'entreprises</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-b from-blue-900 to-indigo-900 text-gray-200 font-sans">
+    <header class="bg-indigo-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Types d'entreprises</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="index.html" class="hover:underline">Accueil</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto py-8">
+        <section class="bg-indigo-700 p-6 rounded shadow mb-8 max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold mb-4 text-center">Introduction</h2>
+            <p>Après avoir fait mes recherches, je me suis rendu compte qu'il est essentiel de bien choisir son statut
+                juridique lorsqu'on se lance en tant que développeur. Chaque option présente des avantages et des
+                inconvénients, et il est important de trouver celle qui correspond le mieux à ses besoins. Voici un
+                résumé des choix les plus pertinents que j'ai identifiés pour démarrer.</p>
+        </section>
+
+
+        <section class="space-y-6">
+            <!-- Auto-entreprise Dropdown -->
+            <div class="bg-indigo-600 p-4 rounded shadow max-w-3xl mx-auto">
+                <button onclick="toggleDropdown('dropdown-auto', this)"
+                    class="text-xl font-bold mb-6 w-full text-left flex items-center justify-between">
+                    Auto-entreprise (Freelance)
+                    <img src="assets/angle-right-solid.svg" alt="Dropdown Icon"
+                        class="w-5 h-5 transition-transform transform">
+                </button>
+                <div id="dropdown-auto" class="hidden">
+                    <p class="mt-4">
+                        Pour les développeurs qui souhaitent travailler en freelance, l'auto-entreprise est souvent la
+                        meilleure
+                        solution. C'est simple à mettre en place, avec des démarches administratives allégées. On peut
+                        démarrer
+                        rapidement et profiter d'avantages comme l'exonération de TVA sous certains seuils de revenus.
+                        Par contre,
+                        il y a des limites comme le plafond de chiffre d'affaires et le fait qu'on engage sa
+                        responsabilité
+                        personnelle.
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- SASU Dropdown -->
+            <div class="bg-indigo-600 p-4 rounded shadow max-w-3xl mx-auto">
+                <button onclick="toggleDropdown('dropdown-sasu', this)"
+                    class="text-xl font-bold mb-6 w-full text-left flex items-center justify-between">
+                    SASU
+                    <img src="assets/angle-right-solid.svg" alt="Dropdown Icon"
+                        class="w-5 h-5 transition-transform transform">
+                </button>
+                <div id="dropdown-sasu" class="hidden">
+                    <p class="mt-4">
+                        Si on veut aller plus loin, la SASU est une option intéressante. Elle permet d'avoir une
+                        structure
+                        solide, idéale pour travailler avec de grandes entreprises ou lever des fonds. On limite sa
+                        responsabilité au capital investi, et c'est une option qui donne une image professionnelle. Par
+                        contre,
+                        elle demande plus d'investissement au départ et des obligations comptables plus complexes.
+                    </p>
+                </div>
+            </div>
+
+            <!-- EURL Dropdown -->
+            <div class="bg-indigo-600 p-4 rounded shadow max-w-3xl mx-auto">
+                <button onclick="toggleDropdown('dropdown-eurl', this)"
+                    class="text-xl font-bold mb-6 w-full text-left flex items-center justify-between">
+                    EURL
+                    <img src="assets/angle-right-solid.svg" alt="Dropdown Icon"
+                        class="w-5 h-5 transition-transform transform">
+                </button>
+                <div id="dropdown-eurl" class="hidden">
+                    <p class="mt-4">
+                        Enfin, l'EURL est une autre possibilité pour ceux qui ont des projets ambitieux. Ce statut est
+                        similaire
+                        à la SASU mais dépend de l'impôt sur le revenu, ce qui peut être intéressant dans certains cas.
+                        Cependant, comme pour la SASU, la création est plus complexe et demande un peu plus de
+                        ressources.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-indigo-700 p-6 rounded shadow mt-8 max-w-3xl mx-auto">
+            <h3 class="text-xl font-bold mb-6 text-center">Mon choix</h3>
+            <p>Pour mon projet, j'ai décidé de commencer par le statut d'auto-entrepreneur. Ce choix correspond à mes
+                besoins
+                actuels, car il me permet de démarrer rapidement et simplement, sans être freiné par des démarches
+                administratives complexes. Avec ce statut, je peux me concentrer sur le développement de mes compétences
+                et de
+                mes projets, tout en ayant une structure adaptée à une activité indépendante.</p>
+            <p>À terme, si mes ambitions évoluent et que je souhaite collaborer avec des entreprises plus grandes ou
+                développer
+                des projets d'envergure, je pourrais envisager de passer à une SASU. Mais pour le moment,
+                l'auto-entreprise est
+                la solution idéale pour poser les bases de mon activité et avancer progressivement vers mes objectifs.
+            </p>
+            <div class="text-center mt-6">
+                <a href="etude.html"
+                    class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-500 transition-all">
+                    Étude de dossier : Auto-entrepreneur
+                </a>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <footer class="bg-indigo-900 text-gray-400 p-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>© 2025 Stéphane-Dev - Tous droits réservés</p>
+        </div>
+    </footer>
+</body>
+<script src="./main.js"></script>
+
+</html>
